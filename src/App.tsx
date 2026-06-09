@@ -7,6 +7,7 @@ import {
   type ReactNode,
 } from "react";
 import "./App.css";
+import { CroppedText } from "./components/CroppedText";
 import CanProxy, {
   type CurrentUser,
   type Permission,
@@ -105,6 +106,9 @@ const actionMessages: Record<Action, string> = {
   reset: "Form reset",
   archive: "Moved to archive",
 };
+
+const resizeObserverText =
+  "CroppedText observes its own container and recalculates the longest visible text when the width changes. Drag the lower-right corner of this panel to check the ResizeObserver behavior.";
 
 function App() {
   const [count, setCount] = useState(5);
@@ -216,6 +220,15 @@ function App() {
               </Notice>
             )}
           </ProtectedRoute>
+        </PatternSection>
+
+        <PatternSection
+          title="Complex component"
+          patterns={["ResizeObserver", "useLayoutEffect", "binary search"]}
+        >
+          <div className="complex-component-demo">
+            <CroppedText rows={2}>{resizeObserverText}</CroppedText>
+          </div>
         </PatternSection>
       </main>
     </UserContext.Provider>

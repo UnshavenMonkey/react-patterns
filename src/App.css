@@ -212,6 +212,18 @@
   justify-items: start;
 }
 
+.complex-component-demo {
+  width: min(100%, 560px);
+  min-width: 240px;
+  resize: horizontal;
+  overflow: auto;
+  border: 1px solid #d9e1e8;
+  border-radius: 8px;
+  padding: 18px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgb(31 41 55 / 8%);
+}
+
 button {
   min-height: 40px;
   border: 1px solid #9fb1c1;
