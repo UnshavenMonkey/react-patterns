@@ -1,0 +1,48 @@
+.cropped-text {
+  position: relative;
+  min-width: 0;
+  color: #13202c;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.cropped-text-visible {
+  min-width: 0;
+}
+
+.cropped-text-measurer {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  visibility: hidden;
+  pointer-events: none;
+  overflow: hidden;
+  white-space: normal;
+}
+
+.cropped-text-toggle {
+  margin-top: 12px;
+}
+
+.cropped-text-demo {
+  display: grid;
+  gap: 16px;
+  width: min(100%, 720px);
+}
+
+.cropped-text-resizable {
+  min-width: 240px;
+  max-width: 100%;
+  resize: horizontal;
+  overflow: auto;
+  border: 1px solid #cdd8e2;
+  border-radius: 8px;
+  padding: 16px;
+  background: #ffffff;
+}
+
+.cropped-text-story-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
